@@ -1,5 +1,6 @@
 from flask import render_template
 from app import app
+from app.fireTest import fire
 
 @app.route('/')
 @app.route('/index')
@@ -15,4 +16,6 @@ def index():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    print(fire())
+    return render_template('index.html', title='Home', user=user, posts=posts, fire=fire())
+
