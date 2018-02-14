@@ -12,7 +12,6 @@ def fire():
         "serviceAccount": "/Users/sledro/Documents/firebaseServiceAccountKey.json"
     }
 
-    passw = os.environ['YOUR_ENV_VARIABLE']
     firebase = pyrebase.initialize_app(config)
 
     # Get a reference to the auth service
@@ -20,7 +19,7 @@ def fire():
 
     # Log the user in YOUR_ENV_VARIABLE is a local mac veriable set via bash $ export YOUR_ENV_VARIABLE=your_password
     # By using this I can keep my password off github
-    user = auth.sign_in_with_email_and_password("admin@sledro.com", os.environ['YOUR_ENV_VARIABLE'])
+    user = auth.sign_in_with_email_and_password("admin@sledro.com", "Liverpool./start.shFC18$")
 
     # before the 1 hour expiry:
     user = auth.refresh(user['refreshToken'])
