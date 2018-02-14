@@ -56,4 +56,5 @@ docs/_build/
 # PyBuilder
 target/
 
+# Dataset too large to github 100mb limit
 data_clean.csv
