@@ -1,11 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ user.username }}!</h1>
-    {% for post in posts %}
-    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
-    {{fire}}
+<div class="container">
 
-    <script type='text/javascript' src='https://dub01.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1680px; height: 863px;'><object class='tableauViz' width='1680' height='863' style='display:none;'><param name='host_url' value='https%3A%2F%2Fdub01.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;danatsledrocom' /><param name='name' value='LondonCrime&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron" style="float:left;">
+          <h1>London Crime Predictor</h1>
+          <p>Alowing you to predict crime in the London area.</p>
+          <br />
+          <p>Choose a month and year below, to see our predicted crime statistics for that month..</p>
+          <p>
+                <select>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                </select>
+                <select>
+                        <option value="volvo">2018</option>
+                        <option value="saab">2019</option>
+                        <option value="mercedes">2020</option>
+                        <option value="audi">2021</option>
+                        <option value="volvo">2012</option>
+                        <option value="saab">2013</option>
+                        <option value="mercedes">2024</option>
+                        <option value="audi">2025</option>
+                    </select>
+            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Search &raquo;</a>
+          </p>
+        </div>
+  
+ </div> <!-- /container -->
+
 {% endblock %}
