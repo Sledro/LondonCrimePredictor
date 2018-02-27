@@ -5,10 +5,8 @@
 
         <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron">
-          <h1>London Crime Predictor</h1>
-          <p>Alowing you to predict crime in the London area.</p>
-          <br />
-          <p>Choose a month and year below, to see our predicted crime statistics for that month..</p>
+          <p>Choose a month and year below, to see our predicted crime statistics for that month..Our algorithm analyses almost three million rows
+            of crime record data. For more information about the data used please view the About page. </p>
           <p>
                 <form action='predict' method="post" enctype="multipart/form-data">
                     <select name='month'>
@@ -39,10 +37,16 @@
                 <input class="btn btn-lg btn-primary" type='submit' name='submit'/>
             </form>
           </p>
-          {{month}}
-          {{year}}
         </div>
-  
+
+        <div class="jumbotron" style="float:left;">
+            <p>Predicted results for <strong>{{month}} {{year}} </strong> below:</p>
+            <p>Top crime categoy: <strong>{{crimeType}}</strong><br />
+            Top crime value (No of expected crimes to be comitted in the top category above): <strong>{{crimeCount}}</strong><br /><br /></p>
+            <p>We predicted using sklearn and Linear Regression that the most common crime comitted in <strong>{{month}}  {{year}}</strong> will be  
+            <strong>{{crimeType}}</strong>. Our algorithm predicts that a total of <strong>{{crimeCount}}</strong>, <strong>{{crimeType}}</strong> offences 
+            will be comitted.</p>
+        </div>
  </div> <!-- /container -->
 
 {% endblock %}
