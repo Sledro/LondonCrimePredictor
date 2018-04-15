@@ -48,7 +48,11 @@ coverage.xml
 *.pot
 
 # Django stuff:
+<<<<<<< HEAD
+*.logs:wq
+=======
 *.log
+>>>>>>> origin/master
 
 # Sphinx documentation
 docs/_build/
@@ -59,6 +63,7 @@ target/
 # Dataset too large to github 100mb limit
 <<<<<<< HEAD
 #Cleaned.csv
+
 =======
 data_clean.csv
->>>>>>> bf2e4662fbba3b816a800986b701e34632953e98
+>>>>>>> origin/master
